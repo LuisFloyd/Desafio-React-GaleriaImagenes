@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Card from './components/Card'
+import Footer from './components/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='divPrincipal'>
+      <Header titulo='Galería de Imágenes con React'/>
+      <hr/>
+      <div className='imagenescards'>
+        <Card titulo='gatito #1' src='http://placekitten.com/200/300' descripcion='mirada tierna'/>
+        <Card titulo='gatito #2' src='http://placekitten.com/100/200' descripcion='cara graciosa'/>
+        <Card titulo='gatito #3' src='http://placekitten.com/200/200' descripcion='temeroso' />
+      </div>
+      <hr/>
+      <Footer/>
     </div>
   );
 }
